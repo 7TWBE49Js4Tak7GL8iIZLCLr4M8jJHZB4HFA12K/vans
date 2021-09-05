@@ -1,0 +1,24 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Vans Max Level SloExploits", "DarkTheme")
+
+local Tab = Window:NewTab("Max Level")
+local Section = Tab:NewSection("Max Level")
+Section:NewButton("Max Level", "Max Level", function()
+    print("Clicked")
+    while true do
+        local bool_1 = true;
+        local number_1 = 3160;
+        local number_2 = 1810;
+        local table_1 = {
+        [1] = {
+        ["Value"] = 10,
+        ["HasbeenReported"] = true,
+        ["TrickName"] = 'spin360',
+        ["IsRampTrick"] = false
+        }
+        };
+        local Target = game:GetService("ReplicatedStorage")["Tricks_TrickLanded"];
+        Target:FireServer(bool_1, number_1, number_2, table_1);
+        wait()
+        end
+end)
